@@ -1,4 +1,6 @@
-﻿namespace Notes.Models.Notes
+﻿using MongoDB.Bson.Serialization.Attributes;
+
+namespace Notes.Models.Notes
 {
     /// <summary>
     /// Заметка
@@ -8,6 +10,7 @@
         /// <summary>
         /// Текст заметки
         /// </summary>
+        [BsonElement("Text")]
         public string Text { get; set; }
     }
 }

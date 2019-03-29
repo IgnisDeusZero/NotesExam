@@ -14,18 +14,8 @@
         /// <param name="passwordHash">Хэш пароля</param>
         public UserCreationInfo(string login, string passwordHash)
         {
-            if (login == null)
-            {
-                throw new ArgumentNullException(nameof(login));
-            }
-
-            if (passwordHash == null)
-            {
-                throw new ArgumentNullException(nameof(passwordHash));
-            }
-
-            this.Login = login;
-            this.PasswodHash = passwordHash;
+            this.Login = login ?? throw new ArgumentNullException(nameof(login));
+            this.PasswodHash = passwordHash ?? throw new ArgumentNullException(nameof(passwordHash));
         }
         
         /// <summary>
