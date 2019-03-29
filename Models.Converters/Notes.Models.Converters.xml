@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Notes.Models.Converters</name>
+    </assembly>
+    <members>
+        <member name="T:Notes.Models.Converters.Notes.NoteBuildInfoConverter">
+            <summary>
+            Предоставляет методы конвертирования запроса на создание заметки между клиентской и серверной моделями
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Converters.Notes.NoteBuildInfoConverter.Convert(System.String,Notes.Client.Notes.NoteBuildInfo)">
+            <summary>
+            Переводит запрос на создание заметки из клиентсокой модели в серверную
+            </summary>
+            <param name="clientUserId">Идентификатор пользователя в клиентской модели</param>
+            <param name="clientBuildInfo">Запрос на создание заметки в клиентской модели</param>
+            <returns>Запрос на создание заметки в серверной модели</returns>
+        </member>
+        <member name="T:Notes.Models.Converters.Notes.NoteConverter">
+            <summary>
+            Предоставляет методы конвертирования заметки между серверной и клиентской моделями
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Converters.Notes.NoteConverter.Convert(Notes.Models.Notes.Note)">
+            <summary>
+            Переводит заметку из серверной модели в клиентскую
+            </summary>
+            <param name="modelNote">Заметка в серверной модели</param>
+            <returns>Заметка в клиентской модели</returns>
+        </member>
+        <member name="T:Notes.Models.Converters.Notes.NoteInfoConverter">
+            <summary>
+            Предоставляет методы конвертирования информации о заметке между серверной и клиентской моделями
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Converters.Notes.NoteInfoConverter.Convert(Notes.Models.Notes.NoteInfo)">
+            <summary>
+            Переводит информацию о заметке из серверной модели в клиентскую
+            </summary>
+            <param name="modelNoteInfo">Информация о заметке в серверной модели</param>
+            <returns>Информация о заметке в клиентской модели</returns>
+        </member>
+        <member name="T:Notes.Models.Converters.Notes.NoteInfoSearchQueryConverter">
+            <summary>
+            Предоставляет методы конвертирования запроса за заметками между клиентской и серверной моделями
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Converters.Notes.NoteInfoSearchQueryConverter.Convert(Notes.Client.Notes.NoteInfoSearchQuery)">
+            <summary>
+            Переводит запрос за заметками из клиентсокой модели в серверную
+            </summary>
+            <param name="clientQuery">Запрос за заметками в клиентской модели</param>
+            <returns>Запрос за заметками в серверной модели</returns>
+        </member>
+        <member name="T:Notes.Models.Converters.Notes.NotePathcInfoConverter">
+            <summary>
+            Предоставляет методы конвертирования запроса на изменение заметки между клиентской и серверной моделями
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Converters.Notes.NotePathcInfoConverter.Convert(System.Guid,Notes.Client.Notes.NotePatchInfo)">
+            <summary>
+            Переводит запрос на изменение заметки из клиентсокой модели в серверную
+            </summary>
+            <param name="noteId">Идентификатор заметки</param>
+            <param name="clientPatchInfo">Запрос на изменение заметки в клиентской модели</param>
+            <returns>Запрос на изменение заметки в серверной модели</returns>
+        </member>
+        <member name="T:Notes.Models.Converters.Notes.NoteSortByConverter">
+            <summary>
+            Предоставляет методы конвертирования аспекта сортировки заметок между клиентской и серверной моделями
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Converters.Notes.NoteSortByConverter.Convert(Notes.Client.Notes.NoteSortBy)">
+            <summary>
+            Переводит аспект сортировки заметок из клиентской модели в серверную
+            </summary>
+            <param name="clientSortBy">Аспект сортировки заметок в клиентской модели</param>
+            <returns>Аспект сортировки заметок в серверной модели</returns>
+        </member>
+        <member name="T:Notes.Models.Converters.SortTypeConverter">
+            <summary>
+            Предоставляет методы конвертирования типа сортировки между клиентской и серверной моделями
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Converters.SortTypeConverter.Convert(Notes.Models.SortType)">
+            <summary>
+            Переводит тип сортировки из серверной модели в клиентскую
+            </summary>
+            <param name="sortType">Тип сортировки в сервеной модели</param>
+            <returns>Тип сортировки в клиентской модели</returns>
+        </member>
+        <member name="M:Notes.Models.Converters.SortTypeConverter.Convert(Notes.Client.SortType)">
+            <summary>
+            Переводит тип сортировки из клиентской модели в серверную
+            </summary>
+            <param name="sortType">Тип сортировки в клиентской модели</param>
+            <returns>Тип сортировки в серверной модели</returns>
+        </member>
+        <member name="T:Notes.Models.Converters.Users.UserConverter">
+            <summary>
+            Предоставляет методы конвертирования пользователя между серверной и клиентской моделями
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Converters.Users.UserConverter.Convert(Notes.Models.Users.User)">
+            <summary>
+            Переводит подьзователя из серверной модели в клиентскую
+            </summary>
+            <param name="modelUser">Пользователь в серверной модели</param>
+            <returns>Пользователь в клиентской модели</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Notes.Client.Models</name>
+    </assembly>
+    <members>
+        <member name="T:Notes.Client.Errors.ServiceError">
+            <summary>
+            Сервисная ошибка
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Errors.ServiceError.Code">
+            <summary>
+            Идентификатор ошибки
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Errors.ServiceError.Message">
+            <summary>
+            Системное сообщение об ошибке
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Errors.ServiceError.Target">
+            <summary>
+            Ресурс или тип, который инициировал ошибку
+            </summary>        
+        </member>
+        <member name="P:Notes.Client.Errors.ServiceError.Context">
+            <summary>
+            Дополнительные параметры
+            </summary>        
+        </member>
+        <member name="P:Notes.Client.Errors.ServiceError.Errors">
+            <summary>
+            Вложенные ошибки (например, при валидации)
+            </summary>        
+        </member>
+        <member name="T:Notes.Client.Errors.ServiceErrorCodes">
+            <summary>
+            Коды ошибок
+            </summary>
+        </member>
+        <member name="F:Notes.Client.Errors.ServiceErrorCodes.System">
+            <summary>
+            Системная ошибка
+            </summary>
+        </member>
+        <member name="F:Notes.Client.Errors.ServiceErrorCodes.NotFound">
+            <summary>
+            Не найдено
+            </summary>
+        </member>
+        <member name="F:Notes.Client.Errors.ServiceErrorCodes.Forbidden">
+            <summary>
+            Нет доступа
+            </summary>
+        </member>
+        <member name="F:Notes.Client.Errors.ServiceErrorCodes.Unauthorized">
+            <summary>
+            Не авторизован
+            </summary>
+        </member>
+        <member name="F:Notes.Client.Errors.ServiceErrorCodes.InvalidCredentials">
+            <summary>
+            Некорректные учетные данные
+            </summary>
+        </member>
+        <member name="F:Notes.Client.Errors.ServiceErrorCodes.BadRequest">
+            <summary>
+            Некорректный запрос
+            </summary>
+        </member>
+        <member name="F:Notes.Client.Errors.ServiceErrorCodes.ValidationError">
+            <summary>
+            Ошибка валидации
+            </summary>
+        </member>
+        <member name="T:Notes.Client.Errors.ServiceErrorResponse">
+            <summary>
+            Сервисный ответ с ошибкой
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Errors.ServiceErrorResponse.StatusCode">
+            <summary>
+            Статус код ответа
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Errors.ServiceErrorResponse.Error">
+            <summary>
+            Ошибка
+            </summary>
+        </member>
+        <member name="T:Notes.Client.Notes.Note">
+            <summary>
+            Заметка
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.Note.Text">
+            <summary>
+            Текст заметки
+            </summary>
+        </member>
+        <member name="T:Notes.Client.Notes.NoteBuildInfo">
+            <summary>
+            Информация для создания заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteBuildInfo.Title">
+            <summary>
+            Заголовок заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteBuildInfo.Text">
+            <summary>
+            Текст заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteBuildInfo.Tags">
+            <summary>
+            Теги заметки
+            </summary>
+        </member>
+        <member name="T:Notes.Client.Notes.NoteInfo">
+            <summary>
+            Информация о заметке
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfo.Id">
+            <summary>
+            Идентификатор заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfo.UserId">
+            <summary>
+            Идентификатор пользователя, которому принадлежит заметка
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfo.CreatedAt">
+            <summary>
+            Дата создания заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfo.LastUpdatedAt">
+            <summary>
+            Дата последнего изменения
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfo.Favorite">
+            <summary>
+            Флаг, указывающий, находится заметка в избранном или нет
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfo.Title">
+            <summary>
+            Название заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfo.Tags">
+            <summary>
+            Теги заметки
+            </summary>
+        </member>
+        <member name="T:Notes.Client.Notes.NoteInfoSearchQuery">
+            <summary>
+            Параметры поиска заметок
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfoSearchQuery.Offset">
+            <summary>
+            Позиция, начиная с которой нужно производить поиск
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfoSearchQuery.Limit">
+            <summary>
+            Максимальеное количество заметок, которое нужно вернуть
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfoSearchQuery.UserId">
+            <summary>
+            Пользователь, которому принадлежит заметка
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfoSearchQuery.CreatedFrom">
+            <summary>
+            Минимальная дата создания заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfoSearchQuery.CreatedTo">
+            <summary>
+            Максимальная дата создания заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfoSearchQuery.Favorite">
+            <summary>
+            Искать по параметру "в избранном"
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfoSearchQuery.Sort">
+            <summary>
+            Тип сортировки
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfoSearchQuery.SortBy">
+            <summary>
+            Аспект заметки, по которому нужно искать
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteInfoSearchQuery.Tags">
+            <summary>
+            Теги заметок
+            </summary>
+        </member>
+        <member name="T:Notes.Client.Notes.NoteList">
+            <summary>
+             Список c описанием заметок
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NoteList.Notes">
+            <summary>
+            Краткая информация о заметках
+            </summary>
+        </member>
+        <member name="T:Notes.Client.Notes.NotePatchInfo">
+            <summary>
+            Информация для изменения заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NotePatchInfo.Favorite">
+            <summary>
+            Флаг, указывающий, что заявка находится в избранном
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NotePatchInfo.Title">
+            <summary>
+            Новый заголовок заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Notes.NotePatchInfo.Text">
+            <summary>
+            Новый текст заметки
+            </summary>
+        </member>
+        <member name="T:Notes.Client.Notes.NoteSortBy">
+            <summary>
+            Аспект заметки для сортировки
+            </summary>
+        </member>
+        <member name="F:Notes.Client.Notes.NoteSortBy.Creation">
+            <summary>
+            Сортировкаи по дате создания
+            </summary>
+        </member>
+        <member name="F:Notes.Client.Notes.NoteSortBy.LastUpdate">
+            <summary>
+            Сортировка по дате последнего изменения
+            </summary>
+        </member>
+        <member name="T:Notes.Client.SortType">
+            <summary>
+            Тип сортировки
+            </summary>
+        </member>
+        <member name="F:Notes.Client.SortType.Ascending">
+            <summary>
+            Сортировка по возрастанию
+            </summary>
+        </member>
+        <member name="F:Notes.Client.SortType.Descending">
+            <summary>
+            Сортировка по убыванию
+            </summary>
+        </member>
+        <member name="T:Notes.Client.Users.User">
+            <summary>
+            Пользователь
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Users.User.Id">
+            <summary>
+            Идентификатор пользователя
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Users.User.Login">
+            <summary>
+            Логин пользователя
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Users.User.RegisteredAt">
+            <summary>
+            Дата регистрации пользователя
+            </summary>
+        </member>
+        <member name="T:Notes.Client.Users.UserRegistrationInfo">
+            <summary>
+            Информация для регистрации пользователя
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Users.UserRegistrationInfo.Login">
+            <summary>
+            Логин пользователя
+            </summary>
+        </member>
+        <member name="P:Notes.Client.Users.UserRegistrationInfo.Password">
+            <summary>
+            Пароль пользователя
+            </summary>
+        </member>
+    </members>
+</doc>

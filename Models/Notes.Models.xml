@@ -1,0 +1,456 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Notes.Models</name>
+    </assembly>
+    <members>
+        <member name="T:Notes.Models.Notes.Note">
+            <summary>
+            Заметка
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.Note.Text">
+            <summary>
+            Текст заметки
+            </summary>
+        </member>
+        <member name="T:Notes.Models.Notes.NoteCreationInfo">
+            <summary>
+            Информация для создания заметки
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Notes.NoteCreationInfo.#ctor(System.Guid,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Создает заметку
+            </summary>
+            <param name="userId">Идентификатор пользователя, который хочет создать заметку</param>
+            <param name="title">Заголовок заметки</param>
+            <param name="text">Текст заметки</param>
+            <param name="tags">Теги заметки</param>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteCreationInfo.UserId">
+            <summary>
+            Идентификатор пользователя, который хочет создать заметку
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteCreationInfo.Title">
+            <summary>
+            Заголовок заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteCreationInfo.Text">
+            <summary>
+            Текст заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteCreationInfo.Tags">
+            <summary>
+            Теги заметки
+            </summary>
+        </member>
+        <member name="T:Notes.Models.Notes.NoteInfo">
+            <summary>
+            Информация о заметке
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfo.Id">
+            <summary>
+            Идентификатор заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfo.UserId">
+            <summary>
+            Идентификатор пользователя, которому принадлежит заметка
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfo.CreatedAt">
+            <summary>
+            Дата создания заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfo.LastUpdatedAt">
+            <summary>
+            Дата последнего изменения
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfo.Favorite">
+            <summary>
+            Флаг, указывающий, находится заметка в избранном или нет
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfo.Title">
+            <summary>
+            Название заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfo.Tags">
+            <summary>
+            Теги заметки
+            </summary>
+        </member>
+        <member name="T:Notes.Models.Notes.NoteInfoSearchQuery">
+            <summary>
+            Параметры поиска заметок
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfoSearchQuery.Offset">
+            <summary>
+            Позиция, начиная с которой нужно производить поиск
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfoSearchQuery.Limit">
+            <summary>
+            Максимальеное количество заметок, которое нужно вернуть
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfoSearchQuery.UserId">
+            <summary>
+            Пользователь, которому принадлежит заметка
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfoSearchQuery.CreatedFrom">
+            <summary>
+            Минимальная дата создания заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfoSearchQuery.CreatedTo">
+            <summary>
+            Максимальная дата создания заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfoSearchQuery.Favorite">
+            <summary>
+            Искать по параметру "в избранном"
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfoSearchQuery.Sort">
+            <summary>
+            Тип сортировки
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfoSearchQuery.SortBy">
+            <summary>
+            Аспект заметки, по которому нужно искать
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NoteInfoSearchQuery.Tags">
+            <summary>
+            Теги заметок
+            </summary>
+        </member>
+        <member name="T:Notes.Models.Notes.NoteNotFoundExcepction">
+            <summary>
+            Исключение, которое возникает при попытке получить несуществующую заметку
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Notes.NoteNotFoundExcepction.#ctor(System.String)">
+            <summary>
+            Создает новый экземпляр исключения о том, что заметка не найдена
+            </summary>
+            <param name="message">Сообщение об ошибке</param>
+        </member>
+        <member name="M:Notes.Models.Notes.NoteNotFoundExcepction.#ctor(System.Guid)">
+            <summary>
+            Создает новый экземпляр исключения о том, что заметка не найдена
+            </summary>
+            <param name="noteId">Идентификатор заметки, которая не найдена</param>
+        </member>
+        <member name="T:Notes.Models.Notes.NotePatchInfo">
+            <summary>
+            Информация для изменения заметки
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Notes.NotePatchInfo.#ctor(System.Guid,System.Nullable{System.Boolean},System.String,System.String)">
+            <summary>
+            Создает новый экземпляр объекта, описывающего изменение заметки
+            </summary>
+            <param name="noteId">Идентификатор заметки, которую нужно изменить</param>
+            <param name="title">Новый заголовок заметки</param>
+            <param name="text">Новый текст заметки</param>
+            <param name="favorite">Флаг, указывающий, что заявка находится в избранном</param>
+        </member>
+        <member name="P:Notes.Models.Notes.NotePatchInfo.NoteId">
+            <summary>
+            Идентификатор заметки, которую нужно изменить
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NotePatchInfo.Favorite">
+            <summary>
+            Флаг, указывающий, что заявка находится в избранном
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NotePatchInfo.Title">
+            <summary>
+            Новый заголовок заметки
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Notes.NotePatchInfo.Text">
+            <summary>
+            Новый текст заметки
+            </summary>
+        </member>
+        <member name="T:Notes.Models.Notes.NoteSortBy">
+            <summary>
+            Аспект заметки для сортировки
+            </summary>
+        </member>
+        <member name="F:Notes.Models.Notes.NoteSortBy.Creation">
+            <summary>
+            Сортировкаи по дате создания
+            </summary>
+        </member>
+        <member name="F:Notes.Models.Notes.NoteSortBy.LastUpdate">
+            <summary>
+            Сортировка по дате последнего изменения
+            </summary>
+        </member>
+        <member name="T:Notes.Models.Notes.Repositories.INoteRepository">
+            <summary>
+            Интерфейс хранилища заметок
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Notes.Repositories.INoteRepository.CreateAsync(Notes.Models.Notes.NoteCreationInfo,System.Threading.CancellationToken)">
+            <summary>
+            Создать новую заметку
+            </summary>
+            <param name="creationInfo">Информация для создания заметки</param>
+            <param name="cancellationToken">Токен отмены операции</param>
+            <returns>Задача, представляющая асинхронное создание заметки. Результат выполнения операции - информация о созданной заметке</returns>
+        </member>
+        <member name="M:Notes.Models.Notes.Repositories.INoteRepository.SearchAsync(Notes.Models.Notes.NoteInfoSearchQuery,System.Threading.CancellationToken)">
+            <summary>
+            Найти заметки
+            </summary>
+            <param name="query">Поисковый запрос</param>
+            <param name="cancelltionToken">Токен отмены операции</param>
+            <returns>Задача, представляющая асинхронный поиск заметок. Результат выполнения - список найденных заметок</returns>
+        </member>
+        <member name="M:Notes.Models.Notes.Repositories.INoteRepository.GetAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Запросить заметку
+            </summary>
+            <param name="noteId">Идентификатор заметки</param>
+            <param name="cancellationToken">Токен отмены операции</param>
+            <returns>Задача, представлящая асинхронный запрос заметки. Результат выполнения - заметка</returns>
+        </member>
+        <member name="M:Notes.Models.Notes.Repositories.INoteRepository.PatchAsync(Notes.Models.Notes.NotePatchInfo,System.Threading.CancellationToken)">
+            <summary>
+            Изменить заметку
+            </summary>
+            <param name="patchInfo">Описание изменений заметки</param>
+            <param name="cancelltionToken">Токен отмены операции</param>
+            <returns>Задача, представляющая асинхронный запрос на изменение заметки. Результат выполнения - актуальное состояние заметки</returns>
+        </member>
+        <member name="M:Notes.Models.Notes.Repositories.INoteRepository.RemoveAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Удалить заметку
+            </summary>
+            <param name="noteId">Идентификатор заметки</param>
+            <param name="cancelltionToken">Токен отмены операции</param>
+            <returns>Задача, представляющая асинхронный запрос на удаление заметки</returns>
+        </member>
+        <member name="T:Notes.Models.Notes.Repositories.MemoryNoteRepository">
+            <summary>
+            Хранилище заметок в памяти
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Notes.Repositories.MemoryNoteRepository.#ctor">
+            <summary>
+            Создает новый эксземпляр хранилища заметок в памяти
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Notes.Repositories.MemoryNoteRepository.CreateAsync(Notes.Models.Notes.NoteCreationInfo,System.Threading.CancellationToken)">
+            <summary>
+            Создать новую заметку
+            </summary>
+            <param name="creationInfo">Информация для создания заметки</param>
+            <param name="cancellationToken">Токен отмены операции</param>
+            <returns>Задача, представляющая асинхронное создание заметки. Результат выполнения операции - информация о созданной заметке</returns>
+        </member>
+        <member name="M:Notes.Models.Notes.Repositories.MemoryNoteRepository.GetAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Запросить заметку
+            </summary>
+            <param name="noteId">Идентификатор заметки</param>
+            <param name="cancellationToken">Токен отмены операции</param>
+            <returns>Задача, представлящая асинхронный запрос заметки. Результат выполнения - заметка</returns>
+        </member>
+        <member name="M:Notes.Models.Notes.Repositories.MemoryNoteRepository.PatchAsync(Notes.Models.Notes.NotePatchInfo,System.Threading.CancellationToken)">
+            <summary>
+            Изменить заметку
+            </summary>
+            <param name="patchInfo">Описание изменений заметки</param>
+            <param name="cancelltionToken">Токен отмены операции</param>
+            <returns>Задача, представляющая асинхронный запрос на изменение заметки. Результат выполнения - актуальное состояние заметки</returns>
+        </member>
+        <member name="M:Notes.Models.Notes.Repositories.MemoryNoteRepository.RemoveAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Удалить заметку
+            </summary>
+            <param name="noteId">Идентификатор заметки</param>
+            <param name="cancelltionToken">Токен отмены операции</param>
+            <returns>Задача, представляющая асинхронный запрос на удаление заметки</returns>
+        </member>
+        <member name="M:Notes.Models.Notes.Repositories.MemoryNoteRepository.SearchAsync(Notes.Models.Notes.NoteInfoSearchQuery,System.Threading.CancellationToken)">
+            <summary>
+            Найти заметки
+            </summary>
+            <param name="query">Поисковый запрос</param>
+            <param name="cancelltionToken">Токен отмены операции</param>
+            <returns>Задача, представляющая асинхронный поиск заметок. Результат выполнения - список найденных заметок</returns>
+        </member>
+        <member name="T:Notes.Models.SortType">
+            <summary>
+            Тип сортировки
+            </summary>
+        </member>
+        <member name="F:Notes.Models.SortType.Ascending">
+            <summary>
+            Сортировка по возрастанию
+            </summary>
+        </member>
+        <member name="F:Notes.Models.SortType.Descending">
+            <summary>
+            Сортировка по убыванию
+            </summary>
+        </member>
+        <member name="T:Notes.Models.Users.Repositories.IUserRepository">
+            <summary>
+            Интерфейс, описывающий хранилище пользователей
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Users.Repositories.IUserRepository.CreateAsync(Notes.Models.Users.UserCreationInfo,System.Threading.CancellationToken)">
+            <summary>
+            Создать нового пользователя
+            </summary>
+            <param name="creationInfo">Данные для создания нового пользователя</param>
+            <param name="cancellationToken">Токен отмены операции</param>
+            <returns>Созданный пользователь</returns>
+        </member>
+        <member name="M:Notes.Models.Users.Repositories.IUserRepository.GetAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Получить пользователя по идентификатору
+            </summary>
+            <param name="userId">Идентификатор пользователя</param>
+            <param name="cancellationToken">Токен отмены операции</param>
+            <returns>Пользователь</returns>
+        </member>
+        <member name="M:Notes.Models.Users.Repositories.IUserRepository.GetAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Получить пользователя по логину
+            </summary>
+            <param name="login">Логин пользователя</param>
+            <param name="cancellationToken">Токен отмены операции</param>
+            <returns>Пользователь</returns>
+        </member>
+        <member name="T:Notes.Models.Users.Repositories.MemoryUserRepository">
+            <summary>
+            Хранилище пользователей в памяти
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Users.Repositories.MemoryUserRepository.#ctor">
+            <summary>
+            Инициализирует новый эксземлпляр хранилища пользователей в памяти
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Users.Repositories.MemoryUserRepository.CreateAsync(Notes.Models.Users.UserCreationInfo,System.Threading.CancellationToken)">
+            <summary>
+            Создать нового пользователя
+            </summary>
+            <param name="creationInfo">Данные для создания нового пользователя</param>
+            <param name="cancellationToken">Токен отмены операции</param>
+            <returns>Созданный пользователь</returns>
+        </member>
+        <member name="M:Notes.Models.Users.Repositories.MemoryUserRepository.GetAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Получить пользователя по идентификатору
+            </summary>
+            <param name="userId">Идентификатор пользователя</param>
+            <param name="cancellationToken">Токен отмены операции</param>
+            <returns>Пользователь</returns>
+        </member>
+        <member name="M:Notes.Models.Users.Repositories.MemoryUserRepository.GetAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Получить пользователя по логину
+            </summary>
+            <param name="login">Логин пользователя</param>
+            <param name="cancellationToken">Токен отмены операции</param>
+            <returns>Пользователь</returns>
+        </member>
+        <member name="T:Notes.Models.Users.User">
+            <summary>
+            Пользователь
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Users.User.Id">
+            <summary>
+            Идентификатор пользователя
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Users.User.Login">
+            <summary>
+            Логин пользователя
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Users.User.PasswordHash">
+            <summary>
+            Хэш пароля
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Users.User.RegisteredAt">
+            <summary>
+            Дата регистрации пользователя
+            </summary>
+        </member>
+        <member name="T:Notes.Models.Users.UserCreationInfo">
+            <summary>
+            Информация для создания пользователя
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Users.UserCreationInfo.#ctor(System.String,System.String)">
+            <summary>
+            Инийиализирует новый экземпляр описания для создания пользователя
+            </summary>
+            <param name="login">Логин пользователя</param>
+            <param name="passwordHash">Хэш пароля</param>
+        </member>
+        <member name="P:Notes.Models.Users.UserCreationInfo.Login">
+            <summary>
+            Логин пользователя
+            </summary>
+        </member>
+        <member name="P:Notes.Models.Users.UserCreationInfo.PasswodHash">
+            <summary>
+            Хэш пароля
+            </summary>
+        </member>
+        <member name="T:Notes.Models.Users.UserDuplicationException">
+            <summary>
+            Исключение, которое возникает при попытке создать существующего пользователя
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Users.UserDuplicationException.#ctor(System.String)">
+            <summary>
+            Инициализировать эксземпляр исключения по логину пользователя
+            </summary>
+            <param name="login"></param>
+        </member>
+        <member name="T:Notes.Models.Users.UserNotFoundException">
+            <summary>
+            Исключение, которое возникает при попытке получить несуществующего пользователя
+            </summary>
+        </member>
+        <member name="M:Notes.Models.Users.UserNotFoundException.#ctor(System.Guid)">
+            <summary>
+            Инициализировать экземпляр исключения по идентификатору пользователя
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="M:Notes.Models.Users.UserNotFoundException.#ctor(System.String)">
+            <summary>
+            Инициализировать экземпляр исключения по логину пользователя
+            </summary>
+            <param name="login"></param>
+        </member>
+    </members>
+</doc>

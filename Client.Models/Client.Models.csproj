@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Notes.Client</RootNamespace>
+    <AssemblyName>Notes.Client.Models</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\workspace\kontur\school\github\lecture\Web2\src\Client.Models\Notes.Client.Models.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\workspace\kontur\school\github\lecture\Web2\src\Client.Models\Notes.Client.Models.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>
